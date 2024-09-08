@@ -8,6 +8,50 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+<div id="container"></div>
 
+
+<script type="text/babel">
+
+    const MovieCard = ({title, year, poster}) =>{
+        return (
+          <div className="movieCard">
+              <img src={poster} alt={poster}/>
+              <h2 className="movieTitle">{title}</h2>
+              <p className="movieYear">{year}</p>
+          </div>
+        );
+    }
+
+    const movieArray = [
+        {
+            title: "Дэдпул и Россомаха",
+            year: 2024,
+            id: 1,
+            poster: "https://kinogo.biz/uploads/mini/minifull/743/1722265938-1374221730.webp",
+        },
+        {
+            title: "Дэдпул и Россомаха",
+            year: 2024,
+            id: 2,
+            poster: "https://kinogo.biz/uploads/mini/minifull/6e0/1718548851-1409555026.webp",
+        },
+        {
+            title: "Чужой: Ромул",
+            year: 2024,
+            id: 3,
+            poster: "https://kinogo.biz/uploads/mini/minifull/7cb/1717704698-443267418.webp",
+        }
+    ];
+
+    const content = movieArray.map((movie, index) => {
+        return(
+            <MovieCard key={index} title={movie.title} year={movie.year} poster={movie.poster}/>
+        )
+    });
+
+    ReactDOM.render(content, document.getElementById('container'));
+
+</script>
 </body>
 </html>
