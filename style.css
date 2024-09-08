@@ -1,6 +1,5 @@
 
-
-#container{
+#container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -16,6 +15,7 @@
     box-shadow: 0 2px 2px #ccc;
     width: 200px;
     padding: 20px;
+    position: relative;
 }
 
 .movieCard:hover {
@@ -30,8 +30,17 @@
     font-size: 22px;
 }
 
-.movieYear{
+.movieYear {
     font-size: 18px;
     margin: 20px 0 0;
     color: gray;
+}
+
+.rating {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background: #8ecd25;
+    color: white;
+    padding: 2px;
 }
