@@ -18,7 +18,7 @@
 <script type="text/babel">
     let logon = "https://dynamic.design.com/asset/logo/930237d4-5e82-49da-82ec-3568955dbbc7/logo-search-grid-2x?logoTemplateVersion=1&v=638585330670630000&text=Movie+"
 
-    const Header = ({logo}) =>{
+    const Header = ({logo}) => {
         return (
             <header className="header">
                 <a href="#"><img src={logo} alt={logo} className="logo"/></a>
@@ -34,7 +34,7 @@
         );
     }
 
-    const sideBar = () =>{
+    const Sidebar = () => {
         return (
             <nav>
                 <ul>
@@ -48,7 +48,7 @@
         );
     }
 
-    const content = ({title, year, poster, genre, rating}) => {
+    const Content = ({title, year, poster, genre, rating}) => {
         return (
             <div className="movieCard">
                 <img src={poster} alt={poster} className="img"/>
@@ -102,16 +102,26 @@
         },
     ];
 
-    const contentRender = movieArray.map((movie, index) => {
+
+    const Render = () => {
         return (
-            <MovieCard key={index} title={movie.title} year={movie.year} poster={movie.poster} genre={movie.genre} rating={movie.rating}/>
-        );
-    });
-
-
+            <div>
+                <Header logo={logon}/>
+                <div className="main">
+                    <Sidebar/>
+                    <div className="contentRender">
+                        {movieArray.map((movie, index) => (
+                            <Content key={index} title={movie.title} year={movie.year} poster={movie.poster}
+                                     genre={movie.genre} rating={movie.rating}/>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        )
+    }
 
     const root = ReactDOM.createRoot(document.getElementById('container-2'));
-    root.render(<Header logo={logon} />);
+    root.render(<Render/>);
 </script>
 </body>
 </html>
