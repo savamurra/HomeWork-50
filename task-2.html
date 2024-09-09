@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div id="container-2"></div>
+
+<script type="text/babel">
+    let logon = "https://dynamic.design.com/asset/logo/930237d4-5e82-49da-82ec-3568955dbbc7/logo-search-grid-2x?logoTemplateVersion=1&v=638585330670630000&text=Movie+"
+    const Header = ({logo}) =>{
+        return (
+            <header className="header">
+                <p>Бестселлеры</p>
+                <p>Каталог</p>
+                <a href="#"><img src={logo} alt={logo} className="logo"/></a>
+                <form>
+                    <input type="text"/>
+                    <button type="button"></button>
+                </form>
+            </header>
+        );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('container-2'));
+    root.render(<Header logo={logon} />);
+</script>
+</body>
+</html>
