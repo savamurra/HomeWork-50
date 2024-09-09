@@ -48,6 +48,66 @@
         );
     }
 
+    const content = ({title, year, poster, genre, rating}) => {
+        return (
+            <div className="movieCard">
+                <img src={poster} alt={poster} className="img"/>
+                <h2 className="movieTitle">{title}</h2>
+                <p className="movieYear">{year}, {genre}</p>
+                <p className="rating">{rating}</p>
+            </div>
+        );
+    }
+
+    const movieArray = [
+        {
+            title: "Дэдпул и Россомаха",
+            year: 2024,
+            id: 1,
+            poster: "https://kinogo.biz/uploads/mini/minifull/743/1722265938-1374221730.webp",
+            genre: 'Комедия',
+            rating: 7.6,
+        },
+        {
+            title: "Чужой: Ромул",
+            year: 2024,
+            id: 2,
+            poster: "https://kinogo.biz/uploads/mini/minifull/6e0/1718548851-1409555026.webp",
+            genre: 'Ужасы',
+            rating: 7.2,
+        },
+        {
+            title: "Плохие парни до конца",
+            year: 2024,
+            id: 3,
+            poster: "https://kinogo.biz/uploads/mini/minifull/7cb/1717704698-443267418.webp",
+            genre: 'Комедия',
+            rating: 6.9,
+        },
+        {
+            title: "Бордерлендс",
+            year: 2024,
+            id: 3,
+            poster: "https://kinogo.biz/uploads/mini/minifull/094/1718550086-576813483.webp",
+            genre: 'Фантастика',
+            rating: 5.8,
+        },
+        {
+            title: "Синистер. Пожиратель душ",
+            year: 2024,
+            id: 5,
+            poster: "https://kinogo.biz/uploads/mini/minifull/f16/1719648789-1600841954.webp",
+            genre: 'Ужасы',
+            rating: 5.6,
+        },
+    ];
+
+    const contentRender = movieArray.map((movie, index) => {
+        return (
+            <MovieCard key={index} title={movie.title} year={movie.year} poster={movie.poster} genre={movie.genre} rating={movie.rating}/>
+        );
+    });
+
 
 
     const root = ReactDOM.createRoot(document.getElementById('container-2'));
