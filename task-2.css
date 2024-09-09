@@ -3,8 +3,8 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-#container-2 {
-    max-width: 1280px;
+#container {
+    max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 15px;
@@ -34,6 +34,7 @@ body {
     padding: 10px;
     border-radius: 20px;
     background-color: #eee;
+    cursor: pointer;
 }
 
 .search-btn {
@@ -49,4 +50,82 @@ input {
     padding: 4px 5px;
     border: 1px solid #ccc;
     border-radius: 7px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.contentRender{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movieCard {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 10px 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    width: 200px;
+    padding: 20px;
+    position: relative;
+}
+
+.movieCard:hover {
+    scale: 1.1;
+    box-shadow: 0 10px 10px #ccc;
+}
+
+.movieTitle {
+    flex-grow: 1;
+    text-align: center;
+    margin: 20px 0 0;
+    font-size: 22px;
+}
+
+.movieYear {
+    font-size: 18px;
+    margin: 20px 0 0;
+    color: gray;
+}
+
+.rating {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background: #8ecd25;
+    color: white;
+    padding: 2px;
+}
+
+.aside{
+    position: sticky;
+    top: 10px;
+    list-style: none;
+    padding: 0 20px;
+}
+
+.aside li{
+    margin: 20px 0;
+    padding: 10px 5px;
+    background-color: #eee;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.aside a{
+    color: black;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.current{
+    font-size: 20px;
+    font-weight: 600;
 }

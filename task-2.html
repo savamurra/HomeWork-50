@@ -13,7 +13,7 @@
           rel="stylesheet">
 </head>
 <body>
-<div id="container-2"></div>
+<div id="container"></div>
 
 <script type="text/babel">
     let logon = "https://dynamic.design.com/asset/logo/930237d4-5e82-49da-82ec-3568955dbbc7/logo-search-grid-2x?logoTemplateVersion=1&v=638585330670630000&text=Movie+"
@@ -37,9 +37,9 @@
     const Sidebar = () => {
         return (
             <nav>
-                <ul>
+                <ul className="aside">
                     <li><a href="#">Онлайн Кинотеатр</a></li>
-                    <li><a href="#">Фильмы</a></li>
+                    <li><a href="#" className="current">Фильмы</a></li>
                     <li><a href="#">Сериалы</a></li>
                     <li><a href="#">Телеканалы</a></li>
                     <li><a href="#">Спорт</a></li>
@@ -100,6 +100,38 @@
             genre: 'Ужасы',
             rating: 5.6,
         },
+        {
+            title: "Головоломка 2",
+            year: 2024,
+            id: 6,
+            poster: "https://avatars.mds.yandex.net/get-kinopoisk-image/4486454/c0a739ce-0db7-4d4e-9fb3-30bb949e290a/600x900",
+            genre: 'Мультфильм',
+            rating: 7.9,
+        },
+        {
+            title: "Лунтик. Возвращение домой",
+            year: 2024,
+            id: 7,
+            poster: "https://avatars.mds.yandex.net/get-kinopoisk-image/9784475/01ac7d30-bf29-4df2-b0dc-3320cb5f7887/600x900",
+            genre: 'Мультфильм',
+            rating: 6.8,
+        },
+        {
+            title: "Интерстеллар",
+            year: 2014,
+            id: 8,
+            poster: "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/430042eb-ee69-4818-aed0-a312400a26bf/600x900",
+            genre: 'Фантастика',
+            rating: 8.5,
+        },
+        {
+            title: "1+1",
+            year: 2011,
+            id: 9,
+            poster: "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/bf93b465-1189-4155-9dd1-cb9fb5cb1bb5/600x900",
+            genre: 'Драмма',
+            rating: 8.3,
+        },
     ];
     
     const Footer = () =>{
@@ -137,7 +169,7 @@
         )
     }
 
-    const root = ReactDOM.createRoot(document.getElementById('container-2'));
+    const root = ReactDOM.createRoot(document.getElementById('container'));
     root.render(<Render/>);
 </script>
 </body>
