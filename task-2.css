@@ -58,7 +58,8 @@ input {
     gap: 20px;
     background: white;
     margin-top: 20px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
+    padding: 20px 0;
 }
 
 .contentRender{
@@ -75,6 +76,7 @@ input {
     width: 200px;
     padding: 20px;
     position: relative;
+    cursor: pointer;
 }
 
 .movieCard:hover {
@@ -109,6 +111,7 @@ input {
     top: 10px;
     list-style: none;
     padding: 0 20px;
+    margin: 0;
 }
 
 .aside li{
@@ -128,4 +131,36 @@ input {
 .current{
     font-size: 20px;
     font-weight: 600;
+}
+
+footer{
+    border-radius: 10px 10px 0 0;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    background: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.websiteName{
+    color: white;
+    text-decoration: none;
+}
+
+.socials ul{
+    display: flex;
+    list-style: none;
+}
+
+
+.socials a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+footer p{
+    color: white;
 }
